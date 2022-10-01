@@ -5,10 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CardPicker"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="400" Width="400">
     <Grid>
-        <Slider HorizontalAlignment="Left" Margin="157,142,0,0" VerticalAlignment="Top" Width="163"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="219,217,0,0" VerticalAlignment="Top"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Slider HorizontalAlignment="Center" VerticalAlignment="Center" Width="124" Minimum="1" Maximum="52" SmallChange="1"/>
+        <Button Content="Draw" FontSize="25" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Grid.Row="1" Click="Button_Click"/>
+        <ListBox Width="180" Height="350" Grid.Column="1" Grid.RowSpan="2"/>
+        <Label Content="Number of drawn cards" HorizontalAlignment="Center" Margin="0,-100,0,0" FontSize="16" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0"/>
 
     </Grid>
 </Window>
