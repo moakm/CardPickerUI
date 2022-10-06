@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 
 namespace CardPickerUI
 {
@@ -8,7 +7,7 @@ namespace CardPickerUI
         static Random random = new Random();
         public static string[] PickSomeCards(int numberOfCards)
         {
-            
+            CardPicker picker = new CardPicker();
             string[] deck = new string[52];
             //string[] numbers = new string[] { "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "D", "K", "A" };
             string[] drawnCards = new string[numberOfCards];
